@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Target_Action" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Gt-mS-VOg">
+                                <rect key="frame" x="0.0" y="64" width="414" height="677"/>
+                                <connections>
+                                    <action selector="didDatePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZeG-CU-QTC"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6F-fJ-MHI">
+                                <rect key="frame" x="20" y="821" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Q6F-fJ-MHI" secondAttribute="bottom" constant="20" id="AzW-qf-L9E"/>
+                            <constraint firstItem="Q6F-fJ-MHI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BCC-Ac-CL3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q6F-fJ-MHI" secondAttribute="trailing" constant="20" id="DqP-l6-laH"/>
+                            <constraint firstItem="9Gt-mS-VOg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="O5a-tt-FRe"/>
+                            <constraint firstItem="Q6F-fJ-MHI" firstAttribute="top" secondItem="9Gt-mS-VOg" secondAttribute="bottom" constant="80" id="OC0-OT-8hq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Gt-mS-VOg" secondAttribute="trailing" id="Ofd-Iv-ARJ"/>
+                            <constraint firstItem="9Gt-mS-VOg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="V4X-kp-BWX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateLable" destination="Q6F-fJ-MHI" id="eIO-HW-KDb"/>
+                        <outlet property="datePicker" destination="9Gt-mS-VOg" id="mXU-Zl-ZI6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="129"/>
+        </scene>
+    </scenes>
+</document>

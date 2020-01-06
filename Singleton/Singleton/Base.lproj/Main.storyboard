@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Singleton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="나이를 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejS-4X-hZq">
+                                <rect key="frame" x="20" y="193" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEm-Vm-Ltk">
+                                <rect key="frame" x="70" y="79" width="44" height="30"/>
+                                <state key="normal" title="Push"/>
+                                <connections>
+                                    <action selector="touchUpPushButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="p3y-T7-DEc"/>
+                                    <segue destination="eCb-ub-Lrs" kind="show" id="Roy-dr-BSv"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름을 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hHz-qY-HNU">
+                                <rect key="frame" x="20" y="134" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VEm-Vm-Ltk" secondAttribute="trailing" constant="300" id="14a-is-puY"/>
+                            <constraint firstItem="VEm-Vm-Ltk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="BgW-cm-sQg"/>
+                            <constraint firstItem="ejS-4X-hZq" firstAttribute="top" secondItem="hHz-qY-HNU" secondAttribute="bottom" constant="25" id="MHD-fX-DCR"/>
+                            <constraint firstItem="hHz-qY-HNU" firstAttribute="top" secondItem="VEm-Vm-Ltk" secondAttribute="bottom" constant="25" id="MhJ-ck-wS7"/>
+                            <constraint firstItem="VEm-Vm-Ltk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="dNO-nS-jrH"/>
+                            <constraint firstItem="ejS-4X-hZq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="g9s-ka-TT2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ejS-4X-hZq" secondAttribute="trailing" constant="20" id="ikf-Pi-aDM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hHz-qY-HNU" secondAttribute="trailing" constant="20" id="tT2-b2-qks"/>
+                            <constraint firstItem="hHz-qY-HNU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uIA-xT-YoT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cxi-UG-mhp"/>
+                    <connections>
+                        <outlet property="ageTextField" destination="ejS-4X-hZq" id="w7S-vq-fg7"/>
+                        <outlet property="nameTextField" destination="hHz-qY-HNU" id="0Y3-nh-XKM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="116"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="E9m-2o-6DJ">
+            <objects>
+                <viewController id="eCb-ub-Lrs" customClass="SecondViewController" customModule="Singleton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a0v-Eo-RIT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C28-YM-QXW">
+                                <rect key="frame" x="20" y="90" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1K-L7-dqR">
+                                <rect key="frame" x="20" y="136" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfx-mq-4Wp">
+                                <rect key="frame" x="20" y="35" width="94" height="30"/>
+                                <state key="normal" title="DImiss"/>
+                                <connections>
+                                    <action selector="DismissButton" destination="eCb-ub-Lrs" eventType="touchUpInside" id="dw6-fI-pEW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="H1K-L7-dqR" firstAttribute="leading" secondItem="Nt8-i2-464" secondAttribute="leading" constant="20" id="5jV-8V-aKG"/>
+                            <constraint firstItem="C28-YM-QXW" firstAttribute="top" secondItem="Nfx-mq-4Wp" secondAttribute="bottom" constant="25" id="FVI-LH-cdY"/>
+                            <constraint firstItem="Nfx-mq-4Wp" firstAttribute="leading" secondItem="Nt8-i2-464" secondAttribute="leading" constant="20" id="IbY-cD-QRc"/>
+                            <constraint firstItem="H1K-L7-dqR" firstAttribute="top" secondItem="C28-YM-QXW" secondAttribute="bottom" constant="25" id="LBe-7F-9jr"/>
+                            <constraint firstItem="C28-YM-QXW" firstAttribute="leading" secondItem="Nt8-i2-464" secondAttribute="leading" constant="20" id="T3o-6F-9cQ"/>
+                            <constraint firstItem="Nt8-i2-464" firstAttribute="trailing" secondItem="C28-YM-QXW" secondAttribute="trailing" constant="20" id="jWq-Qa-R8o"/>
+                            <constraint firstItem="Nt8-i2-464" firstAttribute="trailing" secondItem="Nfx-mq-4Wp" secondAttribute="trailing" constant="300" id="p8y-ge-2G0"/>
+                            <constraint firstItem="Nfx-mq-4Wp" firstAttribute="top" secondItem="Nt8-i2-464" secondAttribute="top" constant="35" id="pSl-9M-ibz"/>
+                            <constraint firstItem="Nt8-i2-464" firstAttribute="trailing" secondItem="H1K-L7-dqR" secondAttribute="trailing" constant="20" id="rCA-Ly-qbV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nt8-i2-464"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jdF-NH-URq"/>
+                    <connections>
+                        <outlet property="ageLabel" destination="H1K-L7-dqR" id="0Wj-gv-bq8"/>
+                        <outlet property="nameLabel" destination="C28-YM-QXW" id="EF3-TV-pWi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HDc-Wb-gPx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955" y="116"/>
+        </scene>
+    </scenes>
+</document>
